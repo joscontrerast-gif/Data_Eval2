@@ -1,0 +1,29 @@
+mysql:8.0
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+
+    enviroment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: proyecto_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 1234
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+      -./01_creacion_base_datos.sql:/docker-entrypoint-initdb.d:/01_creacion_base_datos.sql
+      -./02_backup_y_mantenimiento.sql:/docker-entrypoint-initdb.d:/02_backup_y_mantenimiento.sql
+
+volumens:
+  mysql_data:
+
+
+
+
+
