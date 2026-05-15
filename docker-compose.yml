@@ -18,7 +18,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       -./01_creacion_base_datos.sql:/docker-entrypoint-initdb.d:/01_creacion_base_datos.sql
-      #-./02_backup_y_mantenimiento.sql:/docker-entrypoint-initdb.d:/02_backup_y_mantenimiento.sql
+      
 
 volumens:
   mysql_data:
