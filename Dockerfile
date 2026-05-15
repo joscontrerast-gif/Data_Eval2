@@ -10,7 +10,7 @@ ENV MYSQL_PASSWORD=1234
 #Se copian ambos scripts para que se ejecuten automaticamente
 
 COPY 01_creacion_base_datos.sql /docker-entrypoint-initdb.d/
-COPY 02_backup_y_mantenimiento.sql /docker-entrypoint-initdb.d/
+# COPY 02_backup_y_mantenimiento.sql /docker-entrypoint-initdb.d/
 
 
 
